@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MaterialTable from "material-table";
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
+import { withRouter } from "react-router-dom";
 
 export class Table extends Component {
 	constructor(props) {
@@ -40,7 +41,7 @@ export class Table extends Component {
 							icon: OpenInNewIcon,
 							tooltip: "Show User Details",
 							onClick: (event, rowData) => {
-								// Do save operation
+								this.props.history.push(`/profile?id=${rowData.id}`);
 							},
 						},
 					]}
@@ -53,4 +54,4 @@ export class Table extends Component {
 	}
 }
 
-export default Table;
+export default withRouter(Table);

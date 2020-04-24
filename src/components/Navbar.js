@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 export class Navbar extends Component {
 	render() {
@@ -7,7 +8,9 @@ export class Navbar extends Component {
 			<div>
 				<AppBar position="static">
 					<Toolbar>
-						<Typography variant="h6">Employee Portal</Typography>
+						<Link to="/" style={{ textDecoration: "none", color: "white" }}>
+							<Typography variant="h6">Employee Portal</Typography>
+						</Link>
 					</Toolbar>
 				</AppBar>
 			</div>

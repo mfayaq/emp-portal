@@ -18,7 +18,7 @@ export class Home extends Component {
 		};
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		const setData = () => {
 			let data = mockdata;
 			this.setState({ data });
@@ -40,7 +40,7 @@ export class Home extends Component {
 	render() {
 		const filterData = (key, selectBoxValue) => {
 			let filteredData;
-			if (this.state.filteredData.length == 0) {
+			if (this.state.filteredData.length === 0) {
 				filteredData = this.state.data.filter(
 					(obj) => obj[key] === selectBoxValue
 				);
